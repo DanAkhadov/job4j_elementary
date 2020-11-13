@@ -39,13 +39,13 @@ class StudentTest {
         firstStudent.averageGradeInForeignLanguage = 4.9;
         secondStudent.averageGradeInForeignLanguage = 3.1;
         thirdStudent.averageGradeInForeignLanguage = 4.3;
-        System.out.print("Средняя арифметическая первого студента по трём предметам: ");
+        System.out.print("Средняя арифметическая студента " + firstStudent.name + " " + firstStudent.surname + " по трём предметам: ");
         System.out.println((firstStudent.averageGradeInEconomic + firstStudent.averageGradeInForeignLanguage + firstStudent.averageGradeInMath) / 3);
 
-        System.out.print("Средняя арифметическая второго студента по трём предметам: ");
+        System.out.print("Средняя арифметическая студента " + secondStudent.name + " " + secondStudent.surname + " по трём предметам: ");
         System.out.println((secondStudent.averageGradeInEconomic + secondStudent.averageGradeInForeignLanguage + secondStudent.averageGradeInMath) / 3);
 
-        System.out.print("Средняя арифметическая третьего студента по трём предметам: ");
+        System.out.print("Средняя арифметическая студента " + thirdStudent.name + " " + thirdStudent.surname + " по трём предметам: ");
         System.out.println((thirdStudent.averageGradeInEconomic + thirdStudent.averageGradeInForeignLanguage + thirdStudent.averageGradeInMath) / 3);
     }
 }
