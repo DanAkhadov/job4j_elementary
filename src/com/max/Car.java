@@ -3,35 +3,24 @@ import  java.util.Scanner;
 public class Car {
     public static void main(String[] args) {
         Scanner myScanner = new Scanner(System.in);
+        int n = myScanner.nextInt();
+        int m = myScanner.nextInt();
+        int[][] myArray = new int[n][m];
 
-        int yourNumber = myScanner.nextInt();
-        int i = 0;
-        int j = 0;
-        boolean myBool = true;
-        while (true) {
-            int temp = myScanner.nextInt();
-
-            // Для окончания работы программыж
-            if (temp == 0) {
-                break;
-            }
-
-            // Последовательность от меньшего к большему
-            if (yourNumber <= temp && j != 1) {
-                yourNumber = temp;
-                i = 1;
-            } else if (j != 1 && i == 1) {
-                myBool = false;
-            }
-
-            // Последовательность от большего к меньшему
-            if (yourNumber >= temp && i != 1) {
-                yourNumber = temp;
-                j = 1;
-            } else if (i != 1 && j == 1) {
-                myBool = false;
+        for (int i = 0; i < n; ++i) {
+            for (int j = 0; j < m; ++j) {
+                myArray[i][j] = myScanner.nextInt();
             }
         }
-        System.out.println(myBool);
+        // int j = n - 1; 0 <= j; --j
+
+        // int i = 0; i < m; ++i
+        for (int i = 0; i < m; ++i) {
+            for (int j = n - 1; 0 <= j; --j) {
+                System.out.print(myArray[j][i] + " ");
+            }
+            System.out.println();
+        }
     }
 }
+
